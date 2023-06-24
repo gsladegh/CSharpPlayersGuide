@@ -26,5 +26,37 @@ y = Convert.ToInt32(Console.ReadLine());
 
 if (x < 0 && y > 0)
 {
-    Console.WriteLine("");
+    Console.WriteLine("The enemy is NW");
+}
+else if (x < 0 && y == 0)
+{
+    Console.WriteLine("The enemy is W");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("The enemy is SW");
+}
+else if (x == 0 && y > 0)
+{
+    Console.WriteLine("The enemy is N");
+}
+else if (x == 0 && y == 0)
+{
+    Console.WriteLine("The enemy is here!");
+}
+else if (x == 0 && y < 0)
+{
+    Console.WriteLine("The enemy is S");
+}
+else if (x > 0 && y > 0)
+{
+    Console.WriteLine("The enemy is NE");
+}
+else if (x > 0 && y == 0)
+{
+    Console.WriteLine("The enemy is E");
+}
+else 
+{
+    Console.WriteLine("The enemy is SE");
 }
