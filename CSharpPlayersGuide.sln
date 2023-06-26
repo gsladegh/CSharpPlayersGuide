@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePrototype", "ThePrototyp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMagicCannon", "TheMagicCannon\TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheReplicatorOfDTo", "TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{58E42098-527A-423E-9FF3-6B56C7517E6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{0BC11779-C440-4898-8D68-DAA300C38A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BC11779-C440-4898-8D68-DAA300C38A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BC11779-C440-4898-8D68-DAA300C38A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E42098-527A-423E-9FF3-6B56C7517E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E42098-527A-423E-9FF3-6B56C7517E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E42098-527A-423E-9FF3-6B56C7517E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E42098-527A-423E-9FF3-6B56C7517E6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
