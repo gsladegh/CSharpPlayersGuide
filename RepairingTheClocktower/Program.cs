@@ -13,8 +13,7 @@
     • Hint: Remember that you can use the remainder operator to determine if a number is even or odd.
  */
 Console.Clear();
-Console.Write("Enter a clock number: ");
-int clockNumber = Convert.ToInt32(Console.ReadLine());
+int clockNumber = AskForNumber("Enter a clock number: ");
 
 if(clockNumber % 2 == 0)
 {
@@ -23,4 +22,10 @@ if(clockNumber % 2 == 0)
 else
 {
     Console.WriteLine("Tock");
+}
+
+int AskForNumber(string text)
+{
+    Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
 }
