@@ -52,13 +52,53 @@ Console.WriteLine("4 – Clean Water");
 Console.WriteLine("5 – Machete");
 Console.WriteLine("6 – Canoe");
 Console.WriteLine("7 – Food Supplies");
+
 Console.Write("Who am I talking to? ");
 string name = Console.ReadLine();
+
 Console.Write("What number do you want to see the price of? ");
 int choice = Convert.ToInt32(Console.ReadLine());
 
 bool discount = name == "Grant";
 
+string product;
+
+product = choice switch
+{
+    1 => "Rope",
+    2 => "Torches",
+    3 => "Climbing Equipment",
+    4 => "Clean Water",
+    5 => "Machete",
+    6 => "Canoe",
+    7 => "Food Supplies",
+    _ => "Unknown"
+};
+
+int price = product switch
+{
+    "Rope" => 10,
+    "Torches" => 16,
+    "Climbing Equipment" => 25,
+    "Clean Water" => 2,
+    "Machete" => 20,
+    "Canoe" => 200,
+    "Food Supplies" => 2
+};
+
+decimal price2;
+if (discount)
+{
+    price2 = (decimal)price / 2;
+}
+else
+    price2 = (decimal) price;
+
+Console.WriteLine($"{product} costs {price2} gold.");
+
+
+// old solution
+/*
 switch (choice)
 {
     case 1:
@@ -121,3 +161,4 @@ switch (choice)
         Console.WriteLine("That ain't on the menu");
         break;
 }
+*/

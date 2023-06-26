@@ -39,7 +39,36 @@ Console.WriteLine("6 – Canoe");
 Console.WriteLine("7 – Food Supplies");
 Console.Write("What number do you want to see the price of? ");
 int choice = Convert.ToInt32(Console.ReadLine());
+string product;
 
+product = choice switch
+{
+    1 => "Rope",
+    2 => "Torches",
+    3 => "Climbing Equipment",
+    4 => "Clean Water",
+    5 => "Machete",
+    6 => "Canoe",
+    7 => "Food Supplies",
+    _ => "Unknown"
+};
+
+int price = product switch
+{
+    "Rope" => 10,
+    "Torches" => 16,
+    "Climbing Equipment" => 24,
+    "Clean Water" => 2,
+    "Machete" => 20,
+    "Canoe" => 200,
+    "Food Supplies" => 2
+};
+
+Console.WriteLine($"{product} costs {price} gold.");
+
+
+// Old solution
+/*
 switch(choice)
 {
     case 1: 
@@ -67,3 +96,4 @@ switch(choice)
         Console.WriteLine("That ain't on the menu");
         break;
 }
+*/
