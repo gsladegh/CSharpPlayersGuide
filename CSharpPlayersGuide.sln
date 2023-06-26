@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discounted Inventory", "Dis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePrototype", "ThePrototype\ThePrototype.csproj", "{CE25E288-040F-4473-9CC1-4DA2F3B506E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMagicCannon", "TheMagicCannon\TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{CE25E288-040F-4473-9CC1-4DA2F3B506E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE25E288-040F-4473-9CC1-4DA2F3B506E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE25E288-040F-4473-9CC1-4DA2F3B506E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC11779-C440-4898-8D68-DAA300C38A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC11779-C440-4898-8D68-DAA300C38A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC11779-C440-4898-8D68-DAA300C38A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC11779-C440-4898-8D68-DAA300C38A32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
