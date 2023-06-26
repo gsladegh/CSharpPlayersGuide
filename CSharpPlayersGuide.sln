@@ -15,15 +15,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheTriangleFarmer", "TheTri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheFourSistersAndTheDuckbear", "TheFourSistersAndTheDuckbear\TheFourSistersAndTheDuckbear.csproj", "{424A0569-7BA4-4C3C-863C-055FE40E762F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDominionOfKings", "TheDominionOfKings\TheDominionOfKings.csproj", "{9179497B-7FD2-40D1-AEF7-029B0E55502A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheDominionOfKings", "TheDominionOfKings\TheDominionOfKings.csproj", "{9179497B-7FD2-40D1-AEF7-029B0E55502A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathPractice", "MathPractice\MathPractice.csproj", "{CCB64C50-88D1-48F0-84F5-27ED20362B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathPractice", "MathPractice\MathPractice.csproj", "{CCB64C50-88D1-48F0-84F5-27ED20362B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDefenseOfConsolas", "TheDefenseOfConsolas\TheDefenseOfConsolas.csproj", "{843B78B0-F55B-44E1-87BF-E62F8AF6FD7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheDefenseOfConsolas", "TheDefenseOfConsolas\TheDefenseOfConsolas.csproj", "{843B78B0-F55B-44E1-87BF-E62F8AF6FD7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairingTheClocktower", "RepairingTheClocktower\RepairingTheClocktower.csproj", "{C3337594-4AF0-4258-BDD5-116F77183964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairingTheClocktower", "RepairingTheClocktower\RepairingTheClocktower.csproj", "{C3337594-4AF0-4258-BDD5-116F77183964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchtower", "Watchtower\Watchtower.csproj", "{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watchtower", "Watchtower\Watchtower.csproj", "{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyingInventory", "BuyingInventory\BuyingInventory.csproj", "{E819443F-57D1-4306-8D72-68A2EE6D5D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discounted Inventory", "Discounted Inventory\Discounted Inventory.csproj", "{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E819443F-57D1-4306-8D72-68A2EE6D5D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E819443F-57D1-4306-8D72-68A2EE6D5D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E819443F-57D1-4306-8D72-68A2EE6D5D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E819443F-57D1-4306-8D72-68A2EE6D5D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
