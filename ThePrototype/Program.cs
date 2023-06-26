@@ -40,20 +40,20 @@ do
 } while (number < 0 || number > 100);
 
 Console.Clear();
-int guess = -1;
-Console.WriteLine("User 2, guess the number.");
 
-while (number != guess)
+Console.WriteLine("User 2, guess the number.");
+int guess;
+
+while (true)
 {
     Console.WriteLine("What is your next guess?");
     guess = Convert.ToInt32(Console.ReadLine());
 
-    if (number == guess)
-        break;
-    if(guess < number)
+    if (guess < number)
         Console.WriteLine($"{guess} is too low.");
-    if(guess > number)
+    else if (guess > number)
         Console.WriteLine($"{guess} is too high");
+    else break;
 }
 
 Console.WriteLine("You guessed the number!");
