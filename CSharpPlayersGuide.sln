@@ -25,21 +25,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairingTheClocktower", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watchtower", "Watchtower\Watchtower.csproj", "{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyingInventory", "BuyingInventory\BuyingInventory.csproj", "{E819443F-57D1-4306-8D72-68A2EE6D5D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuyingInventory", "BuyingInventory\BuyingInventory.csproj", "{E819443F-57D1-4306-8D72-68A2EE6D5D94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discounted Inventory", "Discounted Inventory\Discounted Inventory.csproj", "{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discounted Inventory", "Discounted Inventory\Discounted Inventory.csproj", "{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePrototype", "ThePrototype\ThePrototype.csproj", "{CE25E288-040F-4473-9CC1-4DA2F3B506E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePrototype", "ThePrototype\ThePrototype.csproj", "{CE25E288-040F-4473-9CC1-4DA2F3B506E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMagicCannon", "TheMagicCannon\TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMagicCannon", "TheMagicCannon\TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheReplicatorOfDTo", "TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{58E42098-527A-423E-9FF3-6B56C7517E6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheReplicatorOfDTo", "TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{58E42098-527A-423E-9FF3-6B56C7517E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLawsOfFreach", "TheLawsOfFreach\TheLawsOfFreach.csproj", "{A4766286-EF34-4D16-A288-54FC7ECDB82F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLawsOfFreach", "TheLawsOfFreach\TheLawsOfFreach.csproj", "{A4766286-EF34-4D16-A288-54FC7ECDB82F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakingANumber", "TakingANumber\TakingANumber.csproj", "{058D7F77-B49A-42BB-8638-D0BD3C9E2D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakingANumber", "TakingANumber\TakingANumber.csproj", "{058D7F77-B49A-42BB-8638-D0BD3C9E2D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countdown", "Countdown\Countdown.csproj", "{325AEE24-8174-41E2-AEBF-E9F38CC450E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countdown", "Countdown\Countdown.csproj", "{325AEE24-8174-41E2-AEBF-E9F38CC450E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BossBattle-HuntingTheManticore", "BossBattle-HuntingTheManticore\BossBattle-HuntingTheManticore.csproj", "{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{325AEE24-8174-41E2-AEBF-E9F38CC450E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325AEE24-8174-41E2-AEBF-E9F38CC450E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{325AEE24-8174-41E2-AEBF-E9F38CC450E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
