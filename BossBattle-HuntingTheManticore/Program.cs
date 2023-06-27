@@ -85,41 +85,88 @@
     to randomly place the Manticore so that it can be a single-player game
  */
 
+using System.Threading.Channels;
+
 int consolasCityHealth = 15;
 int manticoreHealth = 10;
-int manticoreLocation;
+int round = 1;
 
 // Player 1 establishes where the manticore is
-do
-{
-    Console.WriteLine("Player 1, how far away from the city do you want to station the Manticore? (Between 0 and 100)");
-    manticoreLocation = Convert.ToInt32(Console.ReadLine());
-}
-while (manticoreLocation < 0 || manticoreLocation > 100);
+int manticorePosition = AskForNumberInRange("Player 1, how far away from the city do you want to station the Manticore?", 0, 100);
 
 // Player 2 fights for their life
-int round = 1;
-int possibleCannonDamage;
-int cannonRange;
 Console.Clear();
 Console.WriteLine("Player 2, it is your turn.");
 
 while (manticoreHealth > 0 && consolasCityHealth > 0)
 {
-    Console.WriteLine("------------------------------------------------");    
-    Console.WriteLine($"STATUS: Round: {round}  City: {consolasCityHealth}/15  Manticore: {manticoreHealth}/10)");
-    possibleCannonDamage = GetPotentialCannonDamage(round);
-    Console.WriteLine($"The cannon is expected to deal {possibleCannonDamage} damage this round.");
-    Console.Write("Enter desired cannon range: ");
-    cannonRange = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine($"{GetCannonResult()}");    
-    consolasCityHealth--;
+    // display status for the round.
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("------------------------------------------------");
+    DisplayStatus(round, consolasCityHealth, manticoreHealth);
 
-    if(manticoreHealth <= 0) Console.WriteLine("The Manticore has been destroyed!  The city of Consolas has been saved!");
-    if(consolasCityHealth == 0) Console.WriteLine("LOSER!!! You allowed the city of Consolas to be destroyed!");
+    // Display the amount of damage expected on a hit.
+    int possibleCannonDamage = GetPotentialCannonDamage(round);
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine($"The cannon is expected to deal {possibleCannonDamage} damage this round.");
+
+    // Get target from plyer.
+    Console.ForegroundColor = ConsoleColor.White;
+    int cannonRange = AskForNumber("Enter desired cannon range: ");
+
+    // Display the outcome of the number.
+    Console.ForegroundColor = ConsoleColor.Magenta;
+    GetCannonResult(cannonRange);
+
+    // Deal damage to the Manticore if it was a hit
+    if(cannonRange == manticorePosition) manticoreHealth -= possibleCannonDamage;
+
+    // Deal damage to the city of the Manticore is still alive
+    if (manticoreHealth > 0) consolasCityHealth--;    
 
     round++;    
 }
+
+bool won = consolasCityHealth > 0;
+DisplayWinOrLose(won);
+
+void DisplayWinOrLose(bool won)
+{
+    if (won)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("The Manticore has been destroyed!  The city of Consolas has been saved!");
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("LOSER!!! You allowed the city of Consolas to be destroyed!");
+    }
+    
+}
+
+
+// Gets a number from the user, askin the prompt supplied by 'text'.
+int AskForNumber(string text)
+{
+    Console.Write(text);
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
+}
+
+// Gets a number from the user and ensures it is in he given range.
+int AskForNumberInRange(string text, int min, int max)
+{
+    while(true)
+    {
+        int number = AskForNumber(text);
+        if(number >= min && number <= max)
+            return number;
+    }
+}
+
+void DisplayStatus(int round, int cityHealth, int manticoreHealth) => Console.WriteLine($"STATUS: Round: {round}  City: {cityHealth}/15  Manticore: {manticoreHealth}/10");
 
 int GetPotentialCannonDamage(int round)
 {
@@ -129,19 +176,18 @@ int GetPotentialCannonDamage(int round)
     return 1;
 }
 
-string GetCannonResult()
+void GetCannonResult(int cannonRange)
 {
-    if (cannonRange > manticoreLocation)
+    if (cannonRange > manticorePosition)
     {
-        return "That round OVERSHOT the target.";
+        Console.WriteLine("That round OVERSHOT the target."); 
     }
-    else if (cannonRange < manticoreLocation)
+    else if (cannonRange < manticorePosition)
     {
-        return "That round FELL SHORT of the target";
+        Console.WriteLine("That round FELL SHORT of the target.");
     }
     else
     {
-        manticoreHealth -= possibleCannonDamage;
-        return "That round was a DIRECT HIT!";
+        Console.WriteLine("That round was a DIRECT HIT!");
     }
 }
