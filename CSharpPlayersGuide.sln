@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch18-VinFletchersArrows-Cla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch19-InformationHiding-VinsTrouble", "Ch19-InformationHiding-VinsTrouble\Ch19-InformationHiding-VinsTrouble.csproj", "{D7714278-8051-418E-B324-15657B517714}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch20-Properties-ThePropertiesOfArrows", "Ch20-Properties-ThePropertiesOfArrows\Ch20-Properties-ThePropertiesOfArrows.csproj", "{ACB6D8F1-B7EB-4B1B-B2B0-D2CBA2481A2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{D7714278-8051-418E-B324-15657B517714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7714278-8051-418E-B324-15657B517714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7714278-8051-418E-B324-15657B517714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB6D8F1-B7EB-4B1B-B2B0-D2CBA2481A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB6D8F1-B7EB-4B1B-B2B0-D2CBA2481A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB6D8F1-B7EB-4B1B-B2B0-D2CBA2481A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB6D8F1-B7EB-4B1B-B2B0-D2CBA2481A2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
