@@ -21,24 +21,28 @@
  */
 
 Console.WriteLine("Hi, I'm Vin Fletcher, the best arrow maker around.  Tell me what kind of arrow you want!");
-int length = AskForRange("How long (cm) do you want your arrow shaft to be?: ", 60, 100);
-ArrowHead arrowHead = GetArrowHead();
-Fletching fletching = GetFletching();
+Arrow arrow = GetArrow();
+Console.WriteLine($"The cost for the arrow will be {arrow.GetTotalCost()} gold. A fair price any way you swing it.");
 
-Arrow myArrow = new Arrow(arrowHead, length, fletching);
 
-Console.WriteLine($"The cost for the arrow will be {myArrow.GetTotalCost()}. A fair price any way you swing it.");
-
+Arrow GetArrow()
+{
+    int length = AskForRange("How long (cm) do you want your arrow shaft to be?: ", 60, 100);
+    ArrowHead arrowHead = GetArrowHead();
+    Fletching fletching = GetFletching();
+    return new Arrow(arrowHead, length, fletching);
+}
 
 Fletching GetFletching()
 {
-    Console.Write("What kind of fletching do you want? Plastic, goose feathers (goose) or turkey feathers (turkey)? ");
+    Console.Write("What kind of fletching do you want (plastic, goose feathers or turkey feathers)? ");
     string input = Console.ReadLine();
     return input switch
     {
         "plastic" => Fletching.Plastic,
-        "goose" => Fletching.GooseFeathers,
-        "turkey" => Fletching.TurkeyFeathers
+        "goose feathers" => Fletching.GooseFeathers,
+        "turkey features" => Fletching.TurkeyFeathers,
+        _ => Fletching.Plastic
     };
 }
 
@@ -50,7 +54,8 @@ ArrowHead GetArrowHead()
     {
         "steel" => ArrowHead.Steel,
         "wood" => ArrowHead.Wood,
-        "obsidian" => ArrowHead.Obsidian
+        "obsidian" => ArrowHead.Obsidian,
+        _ => ArrowHead.Wood
     };
 }
 
@@ -90,7 +95,7 @@ public class Arrow
 
     public float GetTotalCost()
     {
-        return (float)(_shaftLength * .05) + (float) GetArrowHeadCost() + (float) GetFletchingCost();
+        return (float)(_shaftLength * .05) + GetArrowHeadCost() + GetFletchingCost();
     }
 
     public int GetArrowHeadCost()
@@ -104,7 +109,7 @@ public class Arrow
         };
     }
 
-    public float GetFletchingCost()
+    public int GetFletchingCost()
     {
         // For fletching, plastic costs 10 gold, turkey feathers cost 5 gold, and goose feathers cost 3 gold
         return _fletching switch
