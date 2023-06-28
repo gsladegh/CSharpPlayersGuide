@@ -32,88 +32,75 @@
  *
  */
 
-(MealType MealType, MainIngredient MainIngredient, Seasoning Seasoning) soup;
+(MealType mealType, MainIngredient mainIngredient, Seasoning seasoning) soup = GetSoup();
+Console.WriteLine($"{soup.seasoning} {soup.mainIngredient} {soup.mealType}.");
 
-// ask user for the type of meal they'd like
-Console.WriteLine("Hi, welcome to my kitchen! Please pick the type of food you'd like me to prepare.");
-Console.WriteLine("1 - Soup");
-Console.WriteLine("2 - Stew");
-Console.WriteLine("3 - Gumbo");
-
-int mealChoice = Convert.ToInt32(Console.ReadLine());
-
-switch (mealChoice)
+(MealType, MainIngredient, Seasoning) GetSoup()
 {
-    case 1:
-        soup.MealType = MealType.Soup;
-        break;
-    case 2:
-        soup.MealType = MealType.Stew;
-        break;
-    case 3:
-        soup.MealType = MealType.Gumbo;
-        break;
-    default:
-        Console.WriteLine("Not a valid choice.  Leftover Gumbo it is!");
-        soup.MealType = MealType.Gumbo;
-        break;
+    MealType type = GetMealType();
+    MainIngredient ingredient = GetMainIngredient();
+    Seasoning seasoning = GetSeasoning();
+    return (type, ingredient, seasoning);
 }
 
-// ask user for the type of main ingredient they'd like
-Console.WriteLine("Please pick your main ingredient.");
-Console.WriteLine("1 - Mushrooms");
-Console.WriteLine("2 - Chicken");
-Console.WriteLine("3 - Carrots");
-Console.WriteLine("4 - Potatoes");
-
-int ingredientChoice = Convert.ToInt32(Console.ReadLine());
-
-switch (ingredientChoice)
-{    
-    case 1:
-        soup.MainIngredient = MainIngredient.Mushroom;
-        break;
-    case 2:
-        soup.MainIngredient = MainIngredient.Chicken;
-        break;
-    case 3:
-        soup.MainIngredient = MainIngredient.Carrot;
-        break;
-    case 4:
-        soup.MainIngredient = MainIngredient.Potato;
-        break;
-    default:
-        Console.WriteLine("Not a valid choice.  Leftover Potatoes it is!");
-        soup.MainIngredient = MainIngredient.Potato;
-        break;
-}
-
-// ask user for the type of seasoning they'd like
-Console.WriteLine("Please pick the type of seasoning you want.");
-Console.WriteLine("1 - Spicy");
-Console.WriteLine("2 - Salty");
-Console.WriteLine("3 - Sweet");
-
-int spiceChoice = Convert.ToInt32(Console.ReadLine());
-
-switch (spiceChoice)
+MealType GetMealType()
 {
-    case 1:
-        soup.Seasoning = Seasoning.Spicy;
-        break;
-    case 2:
-        soup.Seasoning = Seasoning.Salty;
-        break;
-    case 3:
-        soup.Seasoning = Seasoning.Sweet;
-        break;
-    default:
-        Console.WriteLine("Not a valid choice.  Get ready for a lot of salt!");
-        soup.Seasoning = Seasoning.Salty;
-        break;
+    // ask user for the type of meal they'd like
+    Console.WriteLine("Hi, welcome to my kitchen! Please pick the type of food you'd like me to prepare.");
+    Console.WriteLine("1 - Soup");
+    Console.WriteLine("2 - Stew");
+    Console.WriteLine("3 - Gumbo");
+
+    int input = Convert.ToInt32(Console.ReadLine());
+
+    return input switch
+    {
+        1 => MealType.Soup,
+        2 => MealType.Stew,
+        3 => MealType.Gumbo,
+        _ => MealType.Gumbo
+    };
 }
 
-Console.WriteLine($"{soup.Seasoning} {soup.MainIngredient} {soup.MealType}.");
+MainIngredient GetMainIngredient()
+{
+    // ask user for the type of main ingredient they'd like
+    Console.WriteLine("Please pick your main ingredient.");
+    Console.WriteLine("1 - Mushrooms");
+    Console.WriteLine("2 - Chicken");
+    Console.WriteLine("3 - Carrots");
+    Console.WriteLine("4 - Potatoes");
+
+    int input = Convert.ToInt32(Console.ReadLine());
+
+    return input switch
+    {
+        1 => MainIngredient.Mushroom,
+        2 => MainIngredient.Chicken,
+        3 => MainIngredient.Carrot,
+        4 => MainIngredient.Potato,
+        _ => MainIngredient.Potato
+    };
+}
+
+Seasoning GetSeasoning()
+{
+    // ask user for the type of seasoning they'd like
+    Console.WriteLine("Please pick the type of seasoning you want.");
+    Console.WriteLine("1 - Spicy");
+    Console.WriteLine("2 - Salty");
+    Console.WriteLine("3 - Sweet");
+
+    int input = Convert.ToInt32(Console.ReadLine());
+
+    return input switch
+    {
+        1 => Seasoning.Spicy,
+        2 => Seasoning.Salty,
+        3 => Seasoning.Sweet,
+        _ => Seasoning.Salty
+    };
+}
 
 enum MealType
 {
