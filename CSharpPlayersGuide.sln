@@ -3,49 +3,51 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{9764B2CE-D1D2-46BF-B1F8-4C9221493AE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03-HelloWorld", "HelloWorld\Ch03-HelloWorld.csproj", "{9764B2CE-D1D2-46BF-B1F8-4C9221493AE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lvl3-Breadmaker", "Lvl3-Breadmaker\Lvl3-Breadmaker.csproj", "{816B978C-0186-4B68-BAC8-417F28F1BB98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03-ConsolasAndTelim", "Lvl3-Breadmaker\Ch03-ConsolasAndTelim.csproj", "{816B978C-0186-4B68-BAC8-417F28F1BB98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThingNamer3000", "ThingNamer3000\ThingNamer3000.csproj", "{6AA3085A-9DB6-47DA-8F33-FF89BCC67415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch04-Comments-ThingNamer3000", "ThingNamer3000\Ch04-Comments-ThingNamer3000.csproj", "{6AA3085A-9DB6-47DA-8F33-FF89BCC67415}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheVariableShop", "TheVariableShop\TheVariableShop.csproj", "{A673E4F9-E3A9-4F3F-AC84-FB18FDD84200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch06-TypeSystem-TheVariableShop", "TheVariableShop\Ch06-TypeSystem-TheVariableShop.csproj", "{A673E4F9-E3A9-4F3F-AC84-FB18FDD84200}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheTriangleFarmer", "TheTriangleFarmer\TheTriangleFarmer.csproj", "{0BDA0B54-A869-4AA1-A0F9-ABC961316037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch07-Math-TheTriangleFarmer", "TheTriangleFarmer\Ch07-Math-TheTriangleFarmer.csproj", "{0BDA0B54-A869-4AA1-A0F9-ABC961316037}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheFourSistersAndTheDuckbear", "TheFourSistersAndTheDuckbear\TheFourSistersAndTheDuckbear.csproj", "{424A0569-7BA4-4C3C-863C-055FE40E762F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch07-Math-TheFourSistersAndTheDuckbear", "TheFourSistersAndTheDuckbear\Ch07-Math-TheFourSistersAndTheDuckbear.csproj", "{424A0569-7BA4-4C3C-863C-055FE40E762F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheDominionOfKings", "TheDominionOfKings\TheDominionOfKings.csproj", "{9179497B-7FD2-40D1-AEF7-029B0E55502A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch07-Math-TheDominionOfKings", "TheDominionOfKings\Ch07-Math-TheDominionOfKings.csproj", "{9179497B-7FD2-40D1-AEF7-029B0E55502A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathPractice", "MathPractice\MathPractice.csproj", "{CCB64C50-88D1-48F0-84F5-27ED20362B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch07-MathPractice", "MathPractice\Ch07-MathPractice.csproj", "{CCB64C50-88D1-48F0-84F5-27ED20362B72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheDefenseOfConsolas", "TheDefenseOfConsolas\TheDefenseOfConsolas.csproj", "{843B78B0-F55B-44E1-87BF-E62F8AF6FD7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch08-Console-TheDefenseOfConsolas", "TheDefenseOfConsolas\Ch08-Console-TheDefenseOfConsolas.csproj", "{843B78B0-F55B-44E1-87BF-E62F8AF6FD7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairingTheClocktower", "RepairingTheClocktower\RepairingTheClocktower.csproj", "{C3337594-4AF0-4258-BDD5-116F77183964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch09-DecisionMaking-RepairingTheClocktower", "RepairingTheClocktower\Ch09-DecisionMaking-RepairingTheClocktower.csproj", "{C3337594-4AF0-4258-BDD5-116F77183964}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watchtower", "Watchtower\Watchtower.csproj", "{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch09-DecisionMaking-Watchtower", "Watchtower\Ch09-DecisionMaking-Watchtower.csproj", "{3D73EA84-538A-4028-BAE1-3FA63E46ECE4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuyingInventory", "BuyingInventory\BuyingInventory.csproj", "{E819443F-57D1-4306-8D72-68A2EE6D5D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch10-Switches-BuyingInventory", "BuyingInventory\Ch10-Switches-BuyingInventory.csproj", "{E819443F-57D1-4306-8D72-68A2EE6D5D94}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discounted Inventory", "Discounted Inventory\Discounted Inventory.csproj", "{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch10-Switches-Discounted Inventory", "Discounted Inventory\Ch10-Switches-Discounted Inventory.csproj", "{EAFB58B1-2EE4-421A-A124-30F262DDFF8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePrototype", "ThePrototype\ThePrototype.csproj", "{CE25E288-040F-4473-9CC1-4DA2F3B506E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch11-Looping-ThePrototype", "ThePrototype\Ch11-Looping-ThePrototype.csproj", "{CE25E288-040F-4473-9CC1-4DA2F3B506E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheMagicCannon", "TheMagicCannon\TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch11-Looping-TheMagicCannon", "TheMagicCannon\Ch11-Looping-TheMagicCannon.csproj", "{0BC11779-C440-4898-8D68-DAA300C38A32}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheReplicatorOfDTo", "TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{58E42098-527A-423E-9FF3-6B56C7517E6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch12-Arrays-TheReplicatorOfDTo", "TheReplicatorOfDTo\Ch12-Arrays-TheReplicatorOfDTo.csproj", "{58E42098-527A-423E-9FF3-6B56C7517E6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLawsOfFreach", "TheLawsOfFreach\TheLawsOfFreach.csproj", "{A4766286-EF34-4D16-A288-54FC7ECDB82F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch12-Arrays-TheLawsOfFreach", "TheLawsOfFreach\Ch12-Arrays-TheLawsOfFreach.csproj", "{A4766286-EF34-4D16-A288-54FC7ECDB82F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakingANumber", "TakingANumber\TakingANumber.csproj", "{058D7F77-B49A-42BB-8638-D0BD3C9E2D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch13-Methods-TakingANumber", "TakingANumber\Ch13-Methods-TakingANumber.csproj", "{058D7F77-B49A-42BB-8638-D0BD3C9E2D9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countdown", "Countdown\Countdown.csproj", "{325AEE24-8174-41E2-AEBF-E9F38CC450E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch13-Methods-Countdown", "Countdown\Ch13-Methods-Countdown.csproj", "{325AEE24-8174-41E2-AEBF-E9F38CC450E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BossBattle-HuntingTheManticore", "BossBattle-HuntingTheManticore\BossBattle-HuntingTheManticore.csproj", "{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch14-MemoryManagement-BossBattle-HuntingTheManticore", "BossBattle-HuntingTheManticore\Ch14-MemoryManagement-BossBattle-HuntingTheManticore.csproj", "{A3E4E8A7-EF3D-4474-9525-38A2151A8ED4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulasTest", "SimulasTest\SimulasTest.csproj", "{70D2CB5E-F0E6-4A08-B1D4-7DA4E2FD9306}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch16-Enumerations-SimulasTest", "SimulasTest\Ch16-Enumerations-SimulasTest.csproj", "{70D2CB5E-F0E6-4A08-B1D4-7DA4E2FD9306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasSoup-Tuples", "SimulasSoup-Tuples\SimulasSoup-Tuples.csproj", "{FA3A6AD6-0409-4FC4-9CD9-64D11E1622A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch17-Tuples-SimulasSoup-Tuples", "SimulasSoup-Tuples\Ch17-Tuples-SimulasSoup-Tuples.csproj", "{FA3A6AD6-0409-4FC4-9CD9-64D11E1622A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch18-VinFletchersArrows-Classes", "Ch18-VinFletchersArrows-Classes\Ch18-VinFletchersArrows-Classes.csproj", "{17BB6597-3331-40A4-80E1-60B18D46B804}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +143,10 @@ Global
 		{FA3A6AD6-0409-4FC4-9CD9-64D11E1622A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA3A6AD6-0409-4FC4-9CD9-64D11E1622A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA3A6AD6-0409-4FC4-9CD9-64D11E1622A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BB6597-3331-40A4-80E1-60B18D46B804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BB6597-3331-40A4-80E1-60B18D46B804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BB6597-3331-40A4-80E1-60B18D46B804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BB6597-3331-40A4-80E1-60B18D46B804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
