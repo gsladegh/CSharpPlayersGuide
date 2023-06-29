@@ -145,20 +145,12 @@ public class Arrow
         };
     }
 
-    public static Arrow CreateEliteArrow()
-    {
-        return new Arrow(ArrowHead.Steel, 95, Fletching.Plastic);
-    }
+    public static Arrow CreateEliteArrow() => new Arrow(ArrowHead.Steel, 95, Fletching.Plastic);
 
-    public static Arrow CreateBeginnerArrow()
-    {
-        return new Arrow(ArrowHead.Wood, 75, Fletching.GooseFeathers);
-    }
+    public static Arrow CreateBeginnerArrow() => new Arrow(ArrowHead.Wood, 75, Fletching.GooseFeathers);
 
-    public static Arrow CreateMarksmanArrow()
-    {
-        return new Arrow(ArrowHead.Steel, 65, Fletching.GooseFeathers);
-    }
+    public static Arrow CreateMarksmanArrow() => new Arrow(ArrowHead.Steel, 65, Fletching.GooseFeathers);
+    
 }
 
 public enum Fletching { Plastic, TurkeyFeathers, GooseFeathers }
