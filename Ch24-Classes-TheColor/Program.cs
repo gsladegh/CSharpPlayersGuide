@@ -29,22 +29,22 @@ Console.WriteLine($"bluish: {blueish.R} {blueish.G} {blueish.B}");
 
 public class Color
 {
-    public int R { get; set; }
-    public int G { get; set; }
-    public int B { get; set; }
+    public int R { get; }
+    public int G { get; }
+    public int B { get; }
 
-    public static Color White = new Color(255, 255, 255);
-    public static Color Black = new Color(0, 0, 0);
-    public static Color Red = new Color(255, 0, 0);
-    public static Color Orange = new Color(255, 165, 0);
-    public static Color Yellow = new Color(255, 255, 0);
-    public static Color Green = new Color(0, 128, 0);
-    public static Color Blue = new Color(0, 0, 255);
-    public static Color Purple = new Color(128, 0, 128);
+    public static Color White { get; } = new Color(255, 255, 255);
+    public static Color Black { get; } = new Color(0, 0, 0);
+    public static Color Red { get; } = new Color(255, 0, 0);
+    public static Color Orange { get; } = new Color(255, 165, 0);
+    public static Color Yellow { get; } = new Color(255, 255, 0);
+    public static Color Green { get; } = new Color(0, 128, 0);
+    public static Color Blue { get; } = new Color(0, 0, 255);
+    public static Color Purple { get; } = new Color(128, 0, 128);
 
     public Color() : this(0, 0, 0) { }
 
-    public Color(int r, int g, int b)
+    public Color(byte r, byte g, byte b)
     {
         R = r;
         G = g;
