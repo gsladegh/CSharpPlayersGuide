@@ -30,11 +30,13 @@
  */
 
 PasswordValidator pv = new PasswordValidator();
-string password;
+string? password;
 do
 {
     Console.Write("Enter a password (or type q to quit): ");
     password = Console.ReadLine();
+    if (password == null)
+        continue;
     Console.WriteLine($"Password is valid: {pv.PasswordIsValid(password)}");
 
 } while (password != "q");
