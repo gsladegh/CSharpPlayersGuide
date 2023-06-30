@@ -30,22 +30,52 @@
  */
 
 PasswordValidator pv = new PasswordValidator();
-Console.Write("Enter a password: ");
-string password = Console.ReadLine();
-Console.WriteLine($"Password is valid: {pv.PasswordIsValid(password)}");
+string password;
+do
+{
+    Console.Write("Enter a password (or type q to quit): ");
+    password = Console.ReadLine();
+    Console.WriteLine($"Password is valid: {pv.PasswordIsValid(password)}");
+
+} while (password != "q");
+
+Console.WriteLine("Validation completed.");
 
 class PasswordValidator
 {
     public bool PasswordIsValid(string password)
     {
-        return has6characters(password);       
+        return isValidLength(password) && hasValidChars(password);       
     }
 
-    private bool has6characters(string password)
+    private bool isValidLength(string password)
     {
-        return password.Length >= 6;
+        return password.Length >= 6 && password.Length <= 13;
     }
 
+    private bool hasValidChars(string password)
+    {
+        bool hasT = false;
+        bool hasAmpersand = false;
+        bool hasUpper = false;
+        bool hasLower = false;
+        bool hasNumber = false;
 
+        foreach (char c in password)
+        {
+            if(c == 'T')
+                hasT = true;
+            else if(c == '%')
+                hasAmpersand = true;
+            else if (char.IsUpper(c))
+                hasUpper = true;
+            else if (char.IsLower(c))
+                hasLower = true;
+            else if (char.IsDigit(c))
+                hasNumber = true;
+            
+        }
 
+        return !hasT && !hasAmpersand && hasUpper && hasLower && hasNumber;
+    }
 }
