@@ -55,15 +55,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch20-Properties-TheProperti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch21-Static-ArrowFactories", "Ch21-Static-ArrowFactories\Ch21-Static-ArrowFactories.csproj", "{657F9879-4B7E-4690-BACF-FA43D8C4A079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-ThePoint", "Ch24-Classes-ThePoint\Ch24-Classes-ThePoint.csproj", "{95995452-D363-4746-984A-C3EACCB6778E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-ThePoint", "Ch24-Classes-ThePoint\Ch24-Classes-ThePoint.csproj", "{95995452-D363-4746-984A-C3EACCB6778E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TheColor", "Ch24-Classes-TheColor\Ch24-Classes-TheColor.csproj", "{CA5426C2-D456-4222-9BFF-4C4AA4F3CD0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-TheColor", "Ch24-Classes-TheColor\Ch24-Classes-TheColor.csproj", "{CA5426C2-D456-4222-9BFF-4C4AA4F3CD0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TheCard", "Ch24-Classes-TheCard\Ch24-Classes-TheCard.csproj", "{CF235719-2EB2-4AB4-A77A-02101742D705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-TheCard", "Ch24-Classes-TheCard\Ch24-Classes-TheCard.csproj", "{CF235719-2EB2-4AB4-A77A-02101742D705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TheLockedDoor", "Ch24-Classes-TheLockedDoor\Ch24-Classes-TheLockedDoor.csproj", "{261CEAE5-61D2-4475-B8C9-374FED6EBE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-TheLockedDoor", "Ch24-Classes-TheLockedDoor\Ch24-Classes-TheLockedDoor.csproj", "{261CEAE5-61D2-4475-B8C9-374FED6EBE3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-ThePasswordValidator", "Ch24-Classes-ThePasswordValidator\Ch24-Classes-ThePasswordValidator.csproj", "{26DB6BA3-6218-4CB4-B416-2E651750F334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-ThePasswordValidator", "Ch24-Classes-ThePasswordValidator\Ch24-Classes-ThePasswordValidator.csproj", "{26DB6BA3-6218-4CB4-B416-2E651750F334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-RockPaperScissors", "Ch24-Classes-RockPaperScissors\Ch24-Classes-RockPaperScissors.csproj", "{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-15Puzzle", "Ch24-Classes-15Puzzle\Ch24-Classes-15Puzzle.csproj", "{F5728F39-0463-46CF-8F6D-891DC54279AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-Hangman", "Ch24-Classes-Tic-Tac-Toe\Ch24-Classes-Hangman.csproj", "{0AC0BF6E-0745-4C74-8D75-DF0661A48477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TicTacToe", "Ch24-Classes-TicTacToe\Ch24-Classes-TicTacToe.csproj", "{E198EFEF-9D96-4092-9D1B-FD369CF076B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +203,22 @@ Global
 		{26DB6BA3-6218-4CB4-B416-2E651750F334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26DB6BA3-6218-4CB4-B416-2E651750F334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26DB6BA3-6218-4CB4-B416-2E651750F334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5728F39-0463-46CF-8F6D-891DC54279AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5728F39-0463-46CF-8F6D-891DC54279AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5728F39-0463-46CF-8F6D-891DC54279AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5728F39-0463-46CF-8F6D-891DC54279AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC0BF6E-0745-4C74-8D75-DF0661A48477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC0BF6E-0745-4C74-8D75-DF0661A48477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC0BF6E-0745-4C74-8D75-DF0661A48477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC0BF6E-0745-4C74-8D75-DF0661A48477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
