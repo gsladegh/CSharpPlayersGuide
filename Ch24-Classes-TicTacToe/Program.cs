@@ -45,110 +45,147 @@ Console.WriteLine("Welcome to Tic-Tac-Toe. Creating a game.");
 TicTacToeGame game = new TicTacToeGame();
 game.PlayGame();
 
-class TicTacToeGame
+public class TicTacToeGame
 {
-    TicTacToeGameBoard _board = new TicTacToeGameBoard();
-    Player p1 = new Player(); // Will be X
-    Player p2 = new Player(); // Will be O    
-    private int numberOfTurns = 1;
-    
     public void PlayGame()
     {
-        int arrayPosition;
-        string currentPlayer;
+        Board board = new Board();
+        BoardRenderer renderer = new BoardRenderer();
+        Player player1 = new Player(Cell.X); // Will be X
+        Player player2 = new Player(Cell.O); // Will be O    
+        int turnNumber = 0;
 
-        while (!_board.DidSomeoneWin())
+        Player currentPlayer = player1;
+
+        while (turnNumber < 9) // 9 moves is hte max
         {
-            if (numberOfTurns % 2 == 0) 
+            Console.WriteLine($"It is {currentPlayer.Symbol}'s turn.");
+            renderer.Draw(board);
+            Square square = currentPlayer.PickSquare(board);
+            board.FillCell(square.Row, square.Column, currentPlayer.Symbol);
+            if (HasWon(board, Cell.X))
             {
-                currentPlayer = "O";
+                renderer.Draw(board);
+                Console.WriteLine("X Won!");
+                return;
             }
-            else
+            else if (HasWon(board, Cell.O))
             {
-                currentPlayer = "X";
+                renderer.Draw(board);
+                Console.WriteLine("O Won!");
+                return;
             }
 
-            Console.WriteLine($"It is {currentPlayer}'s turn");
-            _board.PrintBoard();
-            Console.Write("What square do you want to play in? ");
-            arrayPosition = Convert.ToInt32(Console.ReadLine());
-            
-            _board.UpdateBoard(arrayPosition, currentPlayer);
-
-            numberOfTurns++;
+            // change to the other player.
+            currentPlayer = currentPlayer == player1 ? player2 : player1;
+            turnNumber++;
         }
+
+        renderer.Draw(board);
+        Console.WriteLine("Draw!");
     }
 
-    public void MakeMove(int arrayPosition, string XorO)
+    private bool HasWon(Board board, Cell value)
     {
+        // Check rows.
+        if (board.ContentsOf(0, 0) == value && board.ContentsOf(0, 1) == value && board.ContentsOf(0, 2) == value) return true;
+        if (board.ContentsOf(1, 0) == value && board.ContentsOf(1, 1) == value && board.ContentsOf(1, 2) == value) return true;
+        if (board.ContentsOf(2, 0) == value && board.ContentsOf(2, 1) == value && board.ContentsOf(2, 2) == value) return true;
 
-    }
-}
+        // Check columns.
+        if (board.ContentsOf(0, 0) == value && board.ContentsOf(1, 0) == value && board.ContentsOf(2, 0) == value) return true;
+        if (board.ContentsOf(0, 1) == value && board.ContentsOf(1, 1) == value && board.ContentsOf(2, 1) == value) return true;
+        if (board.ContentsOf(0, 2) == value && board.ContentsOf(1, 2) == value && board.ContentsOf(2, 2) == value) return true;
 
-public class TicTacToeGameBoard
-{
-    private string[] _boardArray;    
-
-    public TicTacToeGameBoard()
-    {
-        _boardArray = new string[9];
-        int position = 1;
-        /* for (int i = 0; i < _boardArray.Length; i++)
-        {
-            _boardArray[i] = position.ToString();
-            position++;
-        } */
-    }
-
-    public void UpdateBoard(int arrayPosition, string XorO)
-    {
-        _boardArray[arrayPosition - 1] = XorO;
-    }
-
-    public void PrintBoard()
-    {
-        Console.WriteLine($" {_boardArray[6]} | {_boardArray[7]} | {_boardArray[8]}");
-        Console.WriteLine("---+---+---");
-        Console.WriteLine($" {_boardArray[3]} | {_boardArray[4]} | {_boardArray[5]}");
-        Console.WriteLine("---+---+---");
-        Console.WriteLine($" {_boardArray[0]} | {_boardArray[1]} | {_boardArray[2]}");
-    }
-
-    public bool DidSomeoneWin()
-    {
-        // Horizontal Win Condition
-        // -- X's Have it
-        if (_boardArray[6] == "X" && _boardArray[7] == "X" && _boardArray[8] == "X")
-            return true;
-        if (_boardArray[3] == "X" && _boardArray[4] == "X" && _boardArray[5] == "X")
-            return true;
-        if (_boardArray[0] == "X" && _boardArray[1] == "X" && _boardArray[2] == "X")
-            return true;
-        // -- O's Have it
-        if (_boardArray[6] == "O" && _boardArray[7] == "O" && _boardArray[8] == "O")
-            return true;
-        if (_boardArray[3] == "O" && _boardArray[4] == "O" && _boardArray[5] == "O")
-            return true;
-        if (_boardArray[0] == "O" && _boardArray[1] == "O" && _boardArray[2] == "O")
-            return true;
-
-        // Diagonal Win Condition
-        // -- X's Have it
-        if (_boardArray[0] == "X" && _boardArray[4] == "X" && _boardArray[8] == "X")
-            return true;
-        if (_boardArray[6] == "X" && _boardArray[4] == "X" && _boardArray[2] == "X")
-            return true;
-        // -- O's Have it
-        if (_boardArray[0] == "O" && _boardArray[4] == "O" && _boardArray[8] == "O")
-            return true;
-        if (_boardArray[6] == "O" && _boardArray[4] == "O" && _boardArray[2] == "O")
-            return true;
+        // Check diagonals.
+        if (board.ContentsOf(0, 0) == value && board.ContentsOf(1, 1) == value && board.ContentsOf(2, 2) == value) return true;
+        if (board.ContentsOf(2, 0) == value && board.ContentsOf(1, 1) == value && board.ContentsOf(0, 2) == value) return true;
 
         return false;
     }
 }
 
+public class BoardRenderer
+{
+    public void Draw(Board board)
+    {
+        char[,] symbols = new char[3, 3];
+        symbols[0, 0] = GetCharacterFor(board.ContentsOf(0, 0));
+        symbols[0, 1] = GetCharacterFor(board.ContentsOf(0, 1));
+        symbols[0, 2] = GetCharacterFor(board.ContentsOf(0, 2));
+        symbols[1, 0] = GetCharacterFor(board.ContentsOf(1, 0));
+        symbols[1, 1] = GetCharacterFor(board.ContentsOf(1, 1));
+        symbols[1, 2] = GetCharacterFor(board.ContentsOf(1, 2));
+        symbols[2, 0] = GetCharacterFor(board.ContentsOf(2, 0));
+        symbols[2, 1] = GetCharacterFor(board.ContentsOf(2, 1));
+        symbols[2, 2] = GetCharacterFor(board.ContentsOf(2, 2));
+
+        Console.WriteLine($" {symbols[0, 0]} | {symbols[0, 1]} | {symbols[0, 2]}");
+        Console.WriteLine("---+---+---");
+        Console.WriteLine($" {symbols[1, 0]} | {symbols[1, 1]} | {symbols[1, 2]}");
+        Console.WriteLine("---+---+---");
+        Console.WriteLine($" {symbols[2, 0]} | {symbols[2, 1]} | {symbols[2, 2]}");
+    }
+
+    private char GetCharacterFor(Cell cell) => cell switch { Cell.X => 'X', Cell.O => 'O', Cell.Empty => ' ' };
+}
+
 class Player
 {
+    public Cell Symbol { get; }
+    public Player(Cell symbol)
+    {
+        Symbol = symbol;
+    }
 
+    public Square PickSquare(Board board)
+    {
+        while (true)
+        {
+            Console.Write("What square do you want to play in? ");
+            ConsoleKey key = Console.ReadKey().Key;
+            Console.WriteLine();
+
+            Square choice = key switch
+            {
+                ConsoleKey.NumPad7 => new Square(0, 0),
+                ConsoleKey.NumPad8 => new Square(0, 1),
+                ConsoleKey.NumPad9 => new Square(0, 2),
+                ConsoleKey.NumPad4 => new Square(1, 0),
+                ConsoleKey.NumPad5 => new Square(1, 1),
+                ConsoleKey.NumPad6 => new Square(1, 2),
+                ConsoleKey.NumPad1 => new Square(2, 0),
+                ConsoleKey.NumPad2 => new Square(2, 1),
+                ConsoleKey.NumPad3 => new Square(2, 2)
+            };
+
+            if(board.IsEmpty(choice.Row, choice.Column))
+                return choice;            
+            else
+                Console.WriteLine("That square is already taken.");
+        }
+    }
 }
+
+public class Square
+{
+    public int Row { get; }
+    public int Column { get; }
+
+    public Square(int row, int column)
+    {
+        Row = row;
+        Column = column;
+    }
+}
+
+// creates an array of type Cell enum 
+public class Board
+{
+    private readonly Cell[,] _cells = new Cell[3, 3];
+    public Cell ContentsOf(int  row, int column) => _cells[row, column];
+    public void FillCell(int row, int column, Cell value) => _cells[row, column] = value;
+    public bool IsEmpty(int row, int column) => _cells[row, column] == Cell.Empty;
+}
+
+public enum Cell { Empty, X, O }
