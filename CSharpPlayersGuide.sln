@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-Hangman", "Ch2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TicTacToe", "Ch24-Classes-TicTacToe\Ch24-Classes-TicTacToe.csproj", "{E198EFEF-9D96-4092-9D1B-FD369CF076B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch25-Inheritance-PackingInventory", "Ch25-Inheritance-PackingInventory\Ch25-Inheritance-PackingInventory.csproj", "{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,10 @@ Global
 		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E198EFEF-9D96-4092-9D1B-FD369CF076B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
