@@ -43,64 +43,88 @@ while(!myPack.IsFull())
         Console.WriteLine("Added Item!");
     else Console.WriteLine("Failed to Add Item!");
 }
+Console.WriteLine("Pack is FULL!");
 
 void DisplayPackContents(Pack pack)
 {
     Console.WriteLine("Current Contents of Your Pack");
-    Console.WriteLine($"Items: {pack._currentNoItems} out of {pack._inventoryItems.Length}");
-    Console.WriteLine($"Weight: {pack._currentWeight} out of {pack._maxWeight}");
-    Console.WriteLine($"Volume: {pack._currentVolume} out of {pack._maxVolume}");
+    Console.WriteLine($"Items: {pack.CurrentNoItems} out of {pack._inventoryItems.Length}");
+    Console.WriteLine($"Weight: {pack.CurrentWeight} out of {pack.MaxWeight}");
+    Console.WriteLine($"Volume: {pack.CurrentVolume} out of {pack.MaxVolume}");
     Console.WriteLine();
 }
 
 bool AddItemToPack(Pack pack)
 {
-    Console.WriteLine("Choose From the Following Menu to add item to pack");
+    Console.WriteLine("Choose from the menu to add a new item to pack");
     Console.WriteLine("1 - Arrow");
     Console.WriteLine("2 - Bow");
     Console.WriteLine("3 - Rope");
     Console.WriteLine("3 - Water");
     Console.WriteLine("5 - Food");
     Console.WriteLine("6 - Sword");
+
     int choice = Convert.ToInt32(Console.ReadLine());
 
-    switch (choice)
-    {        
-        case 1:
-            if (pack.IsUnderLimits(new Arrow()))
-                pack.Add(new Arrow());
-            break;
-        case 2:
-            if (pack.IsUnderLimits(new Bow()))
-                pack.Add(new Bow());
-            break;
-        case 3:
-            if (pack.IsUnderLimits(new Rope()))
-                pack.Add(new Rope());
-            break;
-        case 4:
-            if (pack.IsUnderLimits(new Water()))
-                pack.Add(new Water());
-            break;
-        case 5:
-            if (pack.IsUnderLimits(new Food()))
-                pack.Add(new Food());
-            break;
-        case 6:
-            if (pack.IsUnderLimits(new Sword()))
-                pack.Add(new Sword());
-            break;
-        default:
-            return false;            
-    }
-    return true;
+    InventoryItem newItem = choice switch
+    {
+        1 => new Arrow(),
+        2 => new Bow(),
+        3 => new Rope(),
+        4 => new Water(),
+        5 => new Food(),
+        6 => new Sword()
+    };
 
+    if(pack.IsUnderLimits(newItem))
+    {
+        pack.Add(newItem);
+        return true;
+    }
+
+    return false;
+}
+
+public class Pack
+{
+    public InventoryItem[] _inventoryItems;
+    public float MaxWeight { get; }
+    public float MaxVolume { get; }
+
+    public float CurrentWeight { get; private set; }
+    public float CurrentVolume { get; private set; }
+    public int CurrentNoItems = 0;
+
+
+    public Pack(int numberOfItems, float maxWeight, float maxVolume)
+    {
+        _inventoryItems = new InventoryItem[numberOfItems];
+        MaxWeight = maxWeight;
+        MaxVolume = maxVolume;
+    }
+
+    public bool Add(InventoryItem item)
+    {
+        if (IsUnderLimits(item))
+        {
+            _inventoryItems[CurrentNoItems] = item;
+            CurrentNoItems++;
+            CurrentVolume += item.Volume;
+            CurrentWeight += item.Weight;
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsUnderLimits(InventoryItem item) => item.Weight + CurrentWeight < MaxWeight && item.Volume + CurrentVolume < MaxVolume && CurrentNoItems < _inventoryItems.Length;
+
+    public bool IsFull() => CurrentWeight == MaxWeight || CurrentVolume == MaxVolume || CurrentNoItems == _inventoryItems.Length;
 }
 
 public class InventoryItem
 {
-    public float Weight { get; protected set; }
-    public float Volume { get; protected set; }
+    public float Weight { get; }
+    public float Volume { get; }
 
     public InventoryItem(float weight, float volume)
     {
@@ -109,71 +133,10 @@ public class InventoryItem
     }
 }
 
-public class Arrow : InventoryItem
-{
-    public Arrow() : base((float)0.1, (float)0.05) { }
-}
+public class Arrow : InventoryItem { public Arrow() : base(0.1f, 0.05f) { } }
+public class Bow : InventoryItem { public Bow() : base( 1, 4) { } }
+public class Rope : InventoryItem { public Rope() : base(1, 1.5f) { } }
+public class Water : InventoryItem { public Water() : base(2, 3) { } }
+public class Food : InventoryItem { public Food() : base(1, 0.5f) { } }
+public class Sword : InventoryItem { public Sword() : base(5, 3) { } }
 
-public class Bow : InventoryItem
-{
-    public Bow() : base((float) 1.0, (float) 0.4) { } 
-}
-
-public class Rope : InventoryItem
-{
-    public Rope() : base(1, (float) 1.5) { }
-}
-
-public class Water : InventoryItem
-{
-    public Water() : base(2, 3) { }
-}
-
-public class Food : InventoryItem
-{
-    public Food() : base(1, (float)0.5) { }
-}
-
-public class Sword : InventoryItem
-{
-    public Sword() : base(5, 3) { }
-}
-
-public class Pack
-{
-    public InventoryItem[] _inventoryItems { get; set; }
-    public float _maxWeight { get; set; }
-    public float _maxVolume { get; set; }
-
-    public float _currentWeight = 0;
-    public float _currentVolume = 0;
-    public int _currentNoItems = 0;
-    
-
-    public Pack(int numberOfItems, float maxWeight, float maxVolume)
-    {
-        _inventoryItems = new InventoryItem[numberOfItems];
-        _maxWeight = maxWeight;
-        _maxVolume = maxVolume;        
-    }
-
-    public bool Add(InventoryItem item)
-    {
-        if(IsUnderLimits(item))
-        {
-            _inventoryItems[_currentNoItems] = item;
-            _currentNoItems++;
-            _currentVolume += item.Volume;
-            _currentWeight += item.Weight;
-            return true;
-        }
-        return false;            
-    }
-
-    public bool IsUnderLimits(InventoryItem item)
-    {
-        return item.Weight + _currentWeight < _maxWeight && item.Volume + _currentVolume < _maxVolume && _currentNoItems < _inventoryItems.Length;
-    }
-
-    public bool IsFull() => _currentWeight == _maxWeight || _currentVolume == _maxVolume || _currentNoItems == _inventoryItems.Length;
-}
