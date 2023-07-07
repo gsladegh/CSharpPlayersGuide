@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TicTacToe", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch25-Inheritance-PackingInventory", "Ch25-Inheritance-PackingInventory\Ch25-Inheritance-PackingInventory.csproj", "{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch26-Polymorphism-LabelingInventory", "Ch25-Polymorphism-LabelingInventory\Ch26-Polymorphism-LabelingInventory.csproj", "{6C797559-1138-4546-B8AC-A11749A6132B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +227,10 @@ Global
 		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C797559-1138-4546-B8AC-A11749A6132B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C797559-1138-4546-B8AC-A11749A6132B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C797559-1138-4546-B8AC-A11749A6132B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C797559-1138-4546-B8AC-A11749A6132B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
