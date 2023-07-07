@@ -65,7 +65,7 @@ for (int i = 0; i < robot1.Commands.Length; i++)
         "south" => new SouthCommand(),
         "east" => new EastCommand(),
         "west" => new WestCommand()
-    };
+    };    
 } 
 
 robot1.Run();
