@@ -50,37 +50,32 @@
  */
 
 Robot robot1 = new Robot();
-robot1.SetCommands(getCommands());
-robot1.Run();
 
-RobotCommand[] getCommands()
+// i am confused on why you can set the command here - unless it's at the array level 
+for (int i = 0; i < robot1.Commands.Length; i++)
 {
-    RobotCommand[] commands = new RobotCommand[3];
-    for (int i = 0; i < 3; i++)
+    Console.Write("Enter a Command (on, off, north, south, east, west): ");
+    string choice = Console.ReadLine();
+
+    robot1.Commands[i] = choice switch
     {
-        Console.Write("Enter a Command (on, off, north, south, east, west): ");
-        string choice = Console.ReadLine();
+        "on" => new OnCommand(),
+        "off" => new OffCommand(),
+        "north" => new NorthCommand(),
+        "south" => new SouthCommand(),
+        "east" => new EastCommand(),
+        "west" => new WestCommand()
+    };
+} 
 
-        commands[i] = choice switch
-        {
-            "on" => new OnCommand(),
-            "off" => new OffCommand(),
-            "north" => new NorthCommand(),
-            "south" => new SouthCommand(),
-            "east" => new EastCommand(),
-            "west" => new WestCommand()
-        };
-    }
-
-    return commands;
-}
+robot1.Run();
 
 public class Robot
 {
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsPowered { get; set; }
-    public RobotCommand?[] Commands { get; private set; } = new RobotCommand?[3];
+    public RobotCommand?[] Commands { get; } = new RobotCommand?[3];
     public void Run()
     {
         foreach (RobotCommand? command in Commands)
@@ -90,7 +85,8 @@ public class Robot
         }
     }
 
-    public void SetCommands(RobotCommand[] robotCommands) => Commands = robotCommands;
+    // don't need
+    // public void SetCommands(RobotCommand[] robotCommands) => Commands = robotCommands;
 }
 
 public abstract class RobotCommand
@@ -141,7 +137,7 @@ public class WestCommand : RobotCommand
 {
     public override void Run(Robot robot)
     {
-        if (robot.IsPowered)
+        if (!robot.IsPowered)
         {
             return;
         }
@@ -152,7 +148,7 @@ public class EastCommand : RobotCommand
 {
     public override void Run(Robot robot)
     {
-        if (robot.IsPowered)
+        if (!robot.IsPowered)
         {
             return;
         }
