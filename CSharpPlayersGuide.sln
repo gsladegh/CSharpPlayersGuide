@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch25-Inheritance-PackingInv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch26-Polymorphism-LabelingInventory", "Ch25-Polymorphism-LabelingInventory\Ch26-Polymorphism-LabelingInventory.csproj", "{6C797559-1138-4546-B8AC-A11749A6132B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch26-Polymorphism-TheOldRobot", "Ch26-Polymorphism-TheOldRobot\Ch26-Polymorphism-TheOldRobot.csproj", "{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{6C797559-1138-4546-B8AC-A11749A6132B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C797559-1138-4546-B8AC-A11749A6132B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C797559-1138-4546-B8AC-A11749A6132B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
