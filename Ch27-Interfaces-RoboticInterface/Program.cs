@@ -45,10 +45,10 @@ public class Robot
     public int X { get; set; }
     public int Y { get; set; }
     public bool IsPowered { get; set; }
-    public RobotCommand?[] Commands { get; } = new RobotCommand?[3];
+    public IRobotCommand?[] Commands { get; } = new IRobotCommand?[3];
     public void Run()
     {
-        foreach (RobotCommand? command in Commands)
+        foreach (IRobotCommand? command in Commands)
         {
             command?.Run(this);
             Console.WriteLine($"[{X} {Y} {IsPowered}]");
@@ -59,69 +59,70 @@ public class Robot
     // public void SetCommands(RobotCommand[] robotCommands) => Commands = robotCommands;
 }
 
-public abstract class RobotCommand
+public interface IRobotCommand
 {
-    public abstract void Run(Robot robot);
+    void Run(Robot robot);
 }
 
-public class OnCommand : RobotCommand
+public class OnCommand : IRobotCommand
 {
-    public override void Run(Robot robot)
+    public void Run(Robot robot) => robot.IsPowered = true;
+}
+
+public class OffCommand : IRobotCommand
+{
+    public void Run(Robot robot) => robot.IsPowered = false;
+}
+
+public class NorthCommand : IRobotCommand
+{
+    public void Run(Robot robot)
     {
-        robot.IsPowered = true;
+        if (robot.IsPowered)
+        {
+            robot.Y++;
+        }
+
+        
+    }
+}
+public class SouthCommand : IRobotCommand
+{
+    public void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.Y--;
+        }
+        
+    }
+}
+public class WestCommand : IRobotCommand
+{
+    public void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.X--;
+        }
+        
+    }
+}
+public class EastCommand : IRobotCommand
+{
+    public void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.X++;
+        }        
     }
 }
 
-public class OffCommand : RobotCommand
-{
-    public override void Run(Robot robot)
-    {
-        robot.IsPowered = false;
-    }
-}
-
-public class NorthCommand : RobotCommand
-{
-    public override void Run(Robot robot)
-    {
-        if (!robot.IsPowered)
-        {
-            return;
-        }
-
-        robot.Y++;
-    }
-}
-public class SouthCommand : RobotCommand
-{
-    public override void Run(Robot robot)
-    {
-        if (!robot.IsPowered)
-        {
-            return;
-        }
-        robot.Y--;
-    }
-}
-public class WestCommand : RobotCommand
-{
-    public override void Run(Robot robot)
-    {
-        if (!robot.IsPowered)
-        {
-            return;
-        }
-        robot.X--;
-    }
-}
-public class EastCommand : RobotCommand
-{
-    public override void Run(Robot robot)
-    {
-        if (!robot.IsPowered)
-        {
-            return;
-        }
-        robot.X++;
-    }
-}
+// Answer this question: Do you feel this is an improvement over using an abstract base class? Why or why not?
+//
+// Author answer: In this situation, I think this is better. For starters, there's less code to do the same thing. No need
+// to have those abstracts and overrides everywhere. But at a more substantial level, inheritance is a pretty
+// strong relationship, and these commands do not really need to have that strong of a relationship to each
+// other. The only thing that really binds them together is that they do the same type of thing. So I think
+// it is better for that reason.
