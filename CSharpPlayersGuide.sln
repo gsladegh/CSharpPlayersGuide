@@ -65,21 +65,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-TheLockedDoor"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-ThePasswordValidator", "Ch24-Classes-ThePasswordValidator\Ch24-Classes-ThePasswordValidator.csproj", "{26DB6BA3-6218-4CB4-B416-2E651750F334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-RockPaperScissors", "Ch24-Classes-RockPaperScissors\Ch24-Classes-RockPaperScissors.csproj", "{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-RockPaperScissors", "Ch24-Classes-RockPaperScissors\Ch24-Classes-RockPaperScissors.csproj", "{693F3B1F-5E5D-4215-A36B-0D40929DDFDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-15Puzzle", "Ch24-Classes-15Puzzle\Ch24-Classes-15Puzzle.csproj", "{F5728F39-0463-46CF-8F6D-891DC54279AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-15Puzzle", "Ch24-Classes-15Puzzle\Ch24-Classes-15Puzzle.csproj", "{F5728F39-0463-46CF-8F6D-891DC54279AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-Hangman", "Ch24-Classes-Tic-Tac-Toe\Ch24-Classes-Hangman.csproj", "{0AC0BF6E-0745-4C74-8D75-DF0661A48477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-Hangman", "Ch24-Classes-Tic-Tac-Toe\Ch24-Classes-Hangman.csproj", "{0AC0BF6E-0745-4C74-8D75-DF0661A48477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch24-Classes-TicTacToe", "Ch24-Classes-TicTacToe\Ch24-Classes-TicTacToe.csproj", "{E198EFEF-9D96-4092-9D1B-FD369CF076B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch24-Classes-TicTacToe", "Ch24-Classes-TicTacToe\Ch24-Classes-TicTacToe.csproj", "{E198EFEF-9D96-4092-9D1B-FD369CF076B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch25-Inheritance-PackingInventory", "Ch25-Inheritance-PackingInventory\Ch25-Inheritance-PackingInventory.csproj", "{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch25-Inheritance-PackingInventory", "Ch25-Inheritance-PackingInventory\Ch25-Inheritance-PackingInventory.csproj", "{0EE2C076-2161-4F3E-B061-FF0B7FB44F87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch26-Polymorphism-LabelingInventory", "Ch25-Polymorphism-LabelingInventory\Ch26-Polymorphism-LabelingInventory.csproj", "{6C797559-1138-4546-B8AC-A11749A6132B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch26-Polymorphism-LabelingInventory", "Ch25-Polymorphism-LabelingInventory\Ch26-Polymorphism-LabelingInventory.csproj", "{6C797559-1138-4546-B8AC-A11749A6132B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch26-Polymorphism-TheOldRobot", "Ch26-Polymorphism-TheOldRobot\Ch26-Polymorphism-TheOldRobot.csproj", "{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch26-Polymorphism-TheOldRobot", "Ch26-Polymorphism-TheOldRobot\Ch26-Polymorphism-TheOldRobot.csproj", "{AF5B5C3A-F56D-4B84-A183-39ABE2D5ED71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch27-Interfaces-RoboticInterface", "Ch27-Interfaces-RoboticInterface\Ch27-Interfaces-RoboticInterface.csproj", "{B4A6314F-94AC-47FB-B130-46D1FB807DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch27-Interfaces-RoboticInterface", "Ch27-Interfaces-RoboticInterface\Ch27-Interfaces-RoboticInterface.csproj", "{B4A6314F-94AC-47FB-B130-46D1FB807DF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch28-Structs-RoomCoordinates", "Ch28-Structs-RoomCoordinates\Ch28-Structs-RoomCoordinates.csproj", "{E2BBAA17-FA73-41D2-BB1F-EF009E59C693}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{B4A6314F-94AC-47FB-B130-46D1FB807DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A6314F-94AC-47FB-B130-46D1FB807DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A6314F-94AC-47FB-B130-46D1FB807DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BBAA17-FA73-41D2-BB1F-EF009E59C693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BBAA17-FA73-41D2-BB1F-EF009E59C693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BBAA17-FA73-41D2-BB1F-EF009E59C693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BBAA17-FA73-41D2-BB1F-EF009E59C693}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
