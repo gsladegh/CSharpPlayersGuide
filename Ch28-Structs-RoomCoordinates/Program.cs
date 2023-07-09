@@ -21,10 +21,8 @@ Coordinate firstCoordinate = new Coordinate(0, 0);
 Coordinate secondCoordinate = new Coordinate(1, 0);
 Coordinate thirdCoordinate = new Coordinate(2, 0);
 
-Console.WriteLine($"Are adjacent? {IsAdjacent(firstCoordinate, secondCoordinate)}");
-Console.WriteLine($"Are adjacent? {IsAdjacent(firstCoordinate, thirdCoordinate)}");
-
-bool IsAdjacent(Coordinate coord1, Coordinate coord2) => (coord1.Row - coord2.Row <= 1 && coord1.Row - coord2.Row >= -1) && (coord1.Col - coord2.Col <= 1 && coord1.Col - coord2.Col >= -1);
+Console.WriteLine($"Are adjacent? {Coordinate.IsAdjacent(firstCoordinate, secondCoordinate)}");
+Console.WriteLine($"Are adjacent? {Coordinate.IsAdjacent(firstCoordinate, thirdCoordinate)}");
 
 public struct Coordinate
 {
@@ -35,6 +33,19 @@ public struct Coordinate
     {
         Row = row;
         Col = col;
-    }    
+    }
+
+    // i almost went this way with a static method that considered the absolute value ... but didn't ... sigh
+    // still seems that there is a better way to write this
+    public static bool IsAdjacent(Coordinate coord1, Coordinate coord2)
+    {
+        int rowDiff = coord1.Row - coord2.Row;
+        int colDiff = coord1.Col - coord2.Col;
+
+        if (Math.Abs(rowDiff) <= 1 && colDiff == 0) return true;
+        if (Math.Abs(colDiff) <=1 && rowDiff == 0) return true; 
+
+        return false;
+    }
 }
 
