@@ -27,17 +27,13 @@
  */
 
 
-ColoredItem<Sword> sword = new ColoredItem<Sword>(new Sword());
-Console.ForegroundColor = sword.ConsoleColor;
-Console.WriteLine(sword.ToString());
+ColoredItem<Sword> sword = new ColoredItem<Sword>(new Sword(), ConsoleColor.Blue);
+ColoredItem<Bow> bow = new ColoredItem<Bow>(new Bow(), ConsoleColor.Red);
+ColoredItem<Axe> axe = new ColoredItem<Axe>(new Axe(), ConsoleColor.DarkYellow);
 
-ColoredItem<Bow> bow = new ColoredItem<Bow>(new Bow());
-Console.ForegroundColor = bow.ConsoleColor;
-Console.WriteLine(bow.ToString());
-
-ColoredItem<Axe> axe = new ColoredItem<Axe>(new Axe());
-Console.ForegroundColor = axe.ConsoleColor;
-Console.WriteLine(axe.ToString());
+sword.Display();
+bow.Display();
+axe.Display();
 
 public class Sword { }
 public class Bow { }
@@ -49,16 +45,15 @@ public class ColoredItem<TItem>
 
     public TItem Item { get; set; }
 
-    public ColoredItem(TItem item)
+    public ColoredItem(TItem item, ConsoleColor color)
     {
         Item = item;
-        Display();
+        ConsoleColor = color;
     }
 
     public void Display()
     {
-        if (Item.GetType() == typeof(Sword)) ConsoleColor = ConsoleColor.DarkRed;
-        if (Item.GetType() == typeof(Axe)) ConsoleColor = ConsoleColor.Green;
-        if (Item.GetType() == typeof(Bow)) ConsoleColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor;
+        Console.WriteLine(Item);
     }
 } 
