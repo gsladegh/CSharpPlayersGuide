@@ -24,7 +24,17 @@
     • Display all three sword instances with code like Console.WriteLine(original);. 
  */
 
+Sword ironSword = new Sword(Material.Iron, Gemstone.None, 70, 20);
 
+Sword steelSword = ironSword with { Material = Material.Steel };
 
+Sword fancySword = ironSword with { Material = Material.Binarium, Gemstone = Gemstone.Bitstone };
+
+Console.WriteLine(ironSword.ToString());
+Console.WriteLine(steelSword.ToString());
+Console.WriteLine(fancySword.ToString());
+
+public record Sword(Material Material, Gemstone Gemstone, float Length, float CrossguardWidth);
 public enum Material { Wood, Bronze, Iron, Steel, Binarium }
 public enum Gemstone { Emerald, Amber, Sapphire, Diamond, Bitstone, None }
+
